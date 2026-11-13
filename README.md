@@ -35,12 +35,17 @@ Every period of a comparison comes back as **one row with all terms side by side
 
 ## How much does it cost to scrape Google Trends?
 
-There is no per-search or per-trend charge at the moment: you pay only the Apify platform usage of your run. Measured runs:
+You pay per result delivered: one price per Explore search (however many charts and rows it returns) and one per Trending now search. Notices, searches Google has no data for and searches that could not be completed are never charged.
 
-| Run | Rows | Time | Platform usage |
-|---|---|---|---|
-| 3-term comparison, US, past 12 months (time, regions, related queries) | 237 | 5 s | about $0.001 |
-| 30 comparisons + 5 Trending now countries (every trend) | 6,441 | 68 s | about $0.04 |
+| Event | FREE | BRONZE | SILVER | GOLD |
+|---|---|---|---|---|
+| Explore search (up to 5 compared terms, every chart you select) | $0.0050 | $0.0042 | $0.0034 | $0.0026 |
+| Trending now search | $0.0006 | $0.00048 | $0.00036 | $0.00024 |
+
+- A **5-term comparison** with interest over time, regions, related queries and the summary is one Explore search: **$0.005**, or **$0.0026** on GOLD — about 190 rows of data.
+- **100 comparisons** cost **$0.50** at the highest tier price and **$0.26** on GOLD.
+- **1,000 trending searches** cost **$0.60**, or **$0.24** on GOLD. No start fee.
+- Set a maximum cost per run in Apify and the Actor stops cleanly when it is reached.
 
 ## Input and output examples
 
